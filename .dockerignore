@@ -1,0 +1,47 @@
+# Git
+.git
+.gitignore
+
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__
+*.so
+
+# Virtual Environment
+.venv
+venv
+env
+
+# IDEs and editors
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Application specific
+instance
+*.db
+*.sqlite
+
+# Test coverage
+htmlcov
+.coverage
+.pytest_cache
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+
+# Documentation
+README.md
+docs/
+

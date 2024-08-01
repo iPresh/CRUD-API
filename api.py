@@ -1,12 +1,14 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_restful import Resource, Api, reqparse, fields, marshal_with, abort
+from flask_migrate import Migrate
 
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 db = SQLAlchemy(app)
 api = Api(app)
+migrate = Migrate(app, db)
 
 class UserModel(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -81,4 +83,4 @@ def home():
     return '<h1>Flask Rest API</h1>'
 
 if __name__ == '__main__':
-    app.run(debug=True) 
+    app.run(host='0.0.0.0', debug=True) 
